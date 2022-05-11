@@ -1,4 +1,4 @@
-FROM us.icr.io/wh-common-rns/base-images/ubi8
+FROM us.icr.io/wh-common-rns/base-images/ubi8:latest
 RUN microdnf --setopt=install_weak_deps=0 --setopt=tsflags=nodocs install -y java-11-openjdk-devel \
     && microdnf clean all \
     && rpm -q java-11-openjdk-devel
