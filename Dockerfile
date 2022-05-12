@@ -1,4 +1,4 @@
-FROM 
+FROM openjdk:11-jre-slim
 RUN microdnf --setopt=install_weak_deps=0 --setopt=tsflags=nodocs install -y java-11-openjdk-devel \
     && microdnf clean all \
     && rpm -q java-11-openjdk-devel
